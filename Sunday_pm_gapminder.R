@@ -39,5 +39,24 @@ gap.in %>%
 
 gap.in %>%
   filter(pop > 15000000) %>%
-  select(country, year, pop)
+  select(country, year, pop) %>%
+  group_by(country) %>%
+  summarize(min = min(pop))
+
+gap.in %>%
+  filter(country == "China") 
+
+#Challenge
+#Calculate the mean population per continent per year for years prior to 1990
+
+gap.in %>%
+  select(continent, year, pop) %>%
+  filter(year < 1990) %>%
+  group_by(continent, year) %>%
+  summarize(mean = mean(pop))
+  
+
+
+
+
 
