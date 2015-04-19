@@ -30,3 +30,13 @@ max(Djibouti$lifeExp)
 mean(Oman$lifeExp)
 min(Oman$lifeExp)
 max(Oman$lifeExp)
+
+#Make a 2 histograms of global life expectancy. 
+#One with the default bin widths and one with narrower bin widths. 
+
+#Default bin widths
+hist(gap.in$lifeExp,main="Global Life Expectancy",xlab="Life Expectancy")
+
+#Narrower bin widths
+hist(gap.in$lifeExp,main="Global Life Expectancy",xlab="Life Expectancy",breaks=50)
+
