@@ -48,7 +48,6 @@ gap.in %>%
 
 #Challenge
 #Calculate the mean population per continent per year for years prior to 1990
-
 gap.in %>%
   select(continent, year, pop) %>%
   filter(year < 1990) %>%
