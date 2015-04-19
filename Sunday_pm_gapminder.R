@@ -23,7 +23,19 @@ gap.in[1:10,1:5]
 #function is a set of code to do one thing
 
 add.me <- function(x,y){
-  x+y
+  (x+y)*8
 }
 
 add.me(3,4)
+
+#Install dplyr package and dependencies
+#only needed to run once
+install.packages("dplyr", dependencies = TRUE)
+
+#this needs to run every time
+library("dplyr")
+
+
+
+
+
