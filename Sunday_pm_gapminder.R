@@ -9,23 +9,19 @@ gap.in<- read.table("output/combined_gapMinder.tsv", sep = "\t", header = TRUE)
 for (number in 1:10){
   print(gap.in[number,])
 }
-
 #you can nest for loops
 for (row.number in 1:10){
       for(col.number in 1:5){
           print(gap.in[row.number,col.number])
       }
 }
-
 gap.in[1:10,1:5]
 
 #how to make a function in R:
 #function is a set of code to do one thing
-
 add.me <- function(x,y){
   (x+y)*8
 }
-
 add.me(3,4)
 
 #Install dplyr package and dependencies
@@ -35,7 +31,13 @@ add.me(3,4)
 #this needs to run every time
 library("dplyr")
 
+#create pipeline in R
+#Find instances where population is greater than 15 million
+#filter is a dplyr function
+gap.in %>%
+  filter(pop > 15000000)
 
-
-
+gap.in %>%
+  filter(pop > 15000000) %>%
+  select(country, year, pop)
 
