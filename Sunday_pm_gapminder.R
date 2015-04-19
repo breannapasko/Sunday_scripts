@@ -61,7 +61,10 @@ gap.in %>%
   filter(year < 1990) %>%
   group_by(continent, year) %>%
   summarize(mean = mean(pop)) -> Challenge1
-  
+ 
+
+#Use iris data to learn how to clean up tables
+#Add iris data frame to environment
 data(iris)
 attach(iris)
 view(iris)
@@ -73,3 +76,13 @@ library("tidyr")
 
 #Turn iris dataset from wide into long format
 gather(iris, "Measurement", "Value", 1:4) -> iris.long
+
+
+
+
+
+
+
+
+
+
