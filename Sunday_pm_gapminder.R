@@ -52,16 +52,24 @@ gap.in %>%
   select(continent, year, pop) %>%
   filter(year < 1990) %>%
   group_by(continent, year) %>%
-  summarize(mean = mean(pop)) 
+  summarize(mean = mean(pop)) %>%
+  as.data.frame()
  
-#order rows by value of mean
+#put data in chart in environment
 gap.in %>%
   select(continent, year, pop) %>%
   filter(year < 1990) %>%
   group_by(continent, year) %>%
-  summarize(mean = mean(pop)) %>%
-  arrange(mean)
+  summarize(mean = mean(pop)) -> Challenge1
+  
+data(iris)
+attach(iris)
+view(iris)
 
+#Install tidyr package
+#install.packages("tidyr", dependencies = TRUE)
+#load tidyr package
+library("tidyr")
 
-
-
+#Turn iris dataset from wide into long format
+gather(iris, "Measurement", "Value", 1:4) -> iris.long
