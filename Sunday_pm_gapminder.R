@@ -30,7 +30,7 @@ add.me(3,4)
 
 #Install dplyr package and dependencies
 #only needed to run once
-install.packages("dplyr", dependencies = TRUE)
+#install.packages("dplyr", dependencies = TRUE)
 
 #this needs to run every time
 library("dplyr")
